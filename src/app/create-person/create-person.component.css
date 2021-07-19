@@ -1,0 +1,14 @@
+.containerBox {
+    width: 100%;
+    /* height: 720px; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+}
+
+.createBox {
+    border: solid 3px black;
+    width: 500px;
+    /* height: 500px; */
+}

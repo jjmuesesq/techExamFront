@@ -1,0 +1,29 @@
+<div class="container-search-family"> 
+    <h1>SEARCH PERSON</h1>
+    <input type="number" [(ngModel)]="idPerson" >
+    <br>
+    <button (click)= searchPersonFamily()> GO </button>
+    <br>
+</div>
+
+
+<div class="container-view-family" *ngIf="statusSearch"> 
+    <div *ngFor="let person of dataTest" class="container-person">
+        <div>
+            <label>Ident    :</label>
+            <input type="text" disabled value={{person.idPerson}}>
+        </div>
+        <div>
+            <label>Name:</label>
+            <input type="text" disabled value={{person.name}}>
+        </div>
+        <div>
+            <label>Birth:</label>
+            <input type="text" disabled value={{person.birth}}>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!statusSearch">
+    <h1>NOT FOUND PERSON / FAMILY</h1>
+</div>

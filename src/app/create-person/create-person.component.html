@@ -1,0 +1,76 @@
+<br>
+<br>
+<br>
+<div class="containerBox">
+    <div class="createBox">
+        <!-- INITIAL PERSON -->
+        <div class="border border-4">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Identificación</span>
+                <input type="number" class="form-control" [(ngModel)] = "idIniPer" placeholder="No Identificacion">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Nombre</span>
+                <input type="text" class="form-control" [(ngModel)] = "nameIniPer" placeholder="example: fulanito">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Fecha</span>
+                <input type="date" class="form-control" [(ngModel)] = "birthIniPer">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">DO YOU WANT ADD A KIN ?</span>
+                <button (click)=questionKin01()> {{txtQst_01}} </button>
+            </div>
+        </div>
+
+        <br>
+        <!-- FIRST KIN -->
+        <div class="border border-4" *ngIf="question_01">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Identificación</span>
+                <input type="number" class="form-control" [(ngModel)] = "idFrsKin" placeholder="No Identificacion">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Nombre</span>
+                <input type="text" class="form-control" [(ngModel)] = "nameFrsKin" placeholder="example: fulanito">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Fecha</span>
+                <input type="date" class="form-control" [(ngModel)] = "birthFrsKin">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">DO YOU WANT ADD A KIN ?</span>
+                <button (click)=questionKin02()> {{txtQst_02}} </button>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- SECOND KIN -->
+        <div class="border border-4" *ngIf="question_02">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Identificación</span>
+                <input type="number" class="form-control" [(ngModel)] = "idScnKin" placeholder="No Identificacion">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Nombre</span>
+                <input type="text" class="form-control" [(ngModel)] = "nameScnKin" placeholder="enter name">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Fecha:</span>
+                <input type="date" class="form-control" [(ngModel)] = "birthScnKin" >
+            </div>
+            <br>
+        </div>
+       
+        <button (click)=createPersons() type="button" class="btn btn-primary"> CREATE </button> 
+    </div>    
+</div>
